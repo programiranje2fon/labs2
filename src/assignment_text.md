@@ -1,4 +1,4 @@
-Lab exercise 2
+# Lab exercise 2
 
 ## Problem 1
 (to be done by the tutor in cooperation with students)
