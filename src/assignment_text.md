@@ -1,9 +1,9 @@
-Lab exercise 2
+# Lab exercise 2
 
 ## Problem 1
 (to be done by the tutor in cooperation with students)
 
-Create the **AggregateStates** Enum in package **p1**, with the following values **(ENUM - enumeration)**:
+Create the **AggregateStates** Enum in package **p1**, with the following values:
 
 1. **SOLID**
 2. **LIQUID**
@@ -11,15 +11,15 @@ Create the **AggregateStates** Enum in package **p1**, with the following values
 
 Create the **TemperatureConverter** class in package **p1** with:
 
-1. Static constant **absoluteZeroC** with the value -273.15 **(STATIC, FINAL, static constants)**
+1. Static constant **absoluteZeroC** with the value -273.15 
 
 2. Static constant **absoluteZeroF** with the value -459.67
 
-3. The method called **convertCtoF** that takes the temperature in degrees Centigrade (a real number) as its parameter. The method checks if the temperature passed as the parameter is greater than or equal to the absolute zero expressed in degrees Centigrade and, if it is, converts it into temperature expressed in degrees Fahrenheit and returns the result. Otherwise, the method returns -1000 and prints "Error" in the console. The conversion formula is **TF = TC*9/5 + 32** **(IF clause and relational operators, RETURN statement and stopping the method run)**
+3. The method called **convertCtoF** that takes the temperature in degrees Centigrade (a real number) as its parameter. The method checks if the temperature passed as the parameter is greater than or equal to the absolute zero expressed in degrees Centigrade and, if it is, converts it into temperature expressed in degrees Fahrenheit and returns the result. Otherwise, the method returns -1000 and prints "Error" in the console. The conversion formula is **TF = TC*9/5 + 32** 
 
 4. The method called **convertFtoC** that takes the temperature in degrees Fahrenheit (a real number) as its parameter. The method checks if the temperature passed as the parameter is greater than or equal to the absolute zero expressed in degrees Fahrenheit and, if it is, converts it into temperature expressed in degrees Centigrade and returns the result. Otherwise, the method returns -1000 and prints "Error" in the console. The conversion formula is **TC = (TF-32)*5/9**
 
-5. The method called **getAggregateStateOfWater** that takes the temperature in degrees Centigrade (a real number) as its parameterand checks if the aggregate state of water at that temperature (Enum). If the temperature is less that 0 degrees Centigrade, the method returns that the water is in the solid state (AggregateStates.SOLID). If the temperature is between 0 do 100 degrees (but still less that 100), the method returns that the water is in the liquid state (AggregateStates.LIQUID), and if the temperature is 100 degrees or higher the method returns that the water is in the gas state (AggregateStates.GAS).**(ELSE clause, complex conditions, logical operators AND, OR, NOT, each logical condition can be stated in multiple ways)**
+5. The method called **getAggregateStateOfWater** that takes the temperature in degrees Centigrade (a real number) as its parameterand checks if the aggregate state of water at that temperature (Enum). If the temperature is less that 0 degrees Centigrade, the method returns that the water is in the solid state (AggregateStates.SOLID). If the temperature is between 0 do 100 degrees (but still less that 100), the method returns that the water is in the liquid state (AggregateStates.LIQUID), and if the temperature is 100 degrees or higher the method returns that the water is in the gas state (AggregateStates.GAS).
 
 Create class **TestTemperatureConverter** in package **p1**. The class should include the **main** method that examines all the methods of the TemperatureConverter class and prints the results in the console.
 
