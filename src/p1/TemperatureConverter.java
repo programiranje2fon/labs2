@@ -27,10 +27,10 @@ class TemperatureConverter {
 	AggregateStates getAggregateStateOfWater(double tc) {
 		if (tc < 0)
 			return AggregateStates.SOLID;
-		else if (tc >= 0 && tc < 100)
+		if (tc < 100)
 			return AggregateStates.LIQUID;
-		else
-			return AggregateStates.GAS;
+		
+		return AggregateStates.GAS;
 	}
 
 }
