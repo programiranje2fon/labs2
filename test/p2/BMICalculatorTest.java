@@ -24,8 +24,13 @@ public class BMICalculatorTest {
 	}
 
 	@Test
-	public void field_BMIvalue() {
+	public void attribute_BMIValue() {
 		assertEquals("Initial value is not 0.0", 0.0, instance.bmiValue, 0.001);
+	}
+	
+	@Test
+	public void attribute_BMIStatus() {
+		assertEquals("Initial value is not null", null, instance.bmiStatus);
 	}
 
 	@Test

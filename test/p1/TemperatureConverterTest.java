@@ -24,12 +24,12 @@ public class TemperatureConverterTest {
 	}
 
 	@Test
-	public void static_constant_absoluteZeroC() {
+	public void constant_absoluteZeroC() {
 		assertEquals("The constant value is not -273.15",-273.15,TemperatureConverter.ABSOLUTE_ZERO_C, 0.001);
 	}
 	
 	@Test
-	public void static_constant_absoluteZeroF() {
+	public void constant_absoluteZeroF() {
 		assertEquals("The constant value is not -459.67",-459.67,TemperatureConverter.ABSOLUTE_ZERO_F, 0.001);
 	}
 	
@@ -83,29 +83,29 @@ public class TemperatureConverterTest {
 	@Test
 	public void method_convertFtoCTestError() {
 		PrintStream aux = System.out;
-	try {
-		//Open outputstream to redirect System.out
-		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-		System.out.flush();
-		//Redirect
-		System.setOut(new PrintStream(buffer));
-		
-		assertEquals("If you enter -460 F, the value returned is not -1000",-1000,instance.convertFtoC(-460), 0.001);
-		
-		System.out.flush();
-		
-		//get method's console output
-		String ispis = buffer.toString();
-		
-		//Revert System.out to its original value
-		System.setOut(aux);
-		
-		assertTrue("In case of error, the word ERROR is NOT printed", ispis.trim().equalsIgnoreCase("ERROR"));
-	} catch (Exception e) {
-		System.setOut(aux);
-		e.printStackTrace();
+		try {
+			//Open outputstream to redirect System.out
+			ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+			System.out.flush();
+			//Redirect
+			System.setOut(new PrintStream(buffer));
+			
+			assertEquals("If you enter -460 F, the value returned is not -1000",-1000,instance.convertFtoC(-460), 0.001);
+			
+			System.out.flush();
+			
+			//get method's console output
+			String ispis = buffer.toString();
+			
+			//Revert System.out to its original value
+			System.setOut(aux);
+			
+			assertTrue("In case of error, the word ERROR is NOT printed", ispis.trim().equalsIgnoreCase("ERROR"));
+		} catch (Exception e) {
+			System.setOut(aux);
+			e.printStackTrace();
+		}
 	}
-}
 	
 	@Test
 	public void method_getAggregateStateOfWaterSOLID() {
