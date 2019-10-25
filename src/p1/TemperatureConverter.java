@@ -6,18 +6,18 @@ class TemperatureConverter {
 
 	static final double ABSOLUTE_ZERO_F = -459.67;
 
-	double convertCtoF(double tc) {
-		if (tc >= ABSOLUTE_ZERO_C)
-			return tc * 9 / 5 + 32;
+	double convertToFahrenheit(double tempCentigrade) {
+		if (tempCentigrade >= ABSOLUTE_ZERO_C)
+			return tempCentigrade * 9 / 5 + 32;
 		else {
 			System.out.println("Error");
 			return -1000;
 		}
 	}
 
-	double convertFtoC(double tf) {
-		if (tf >= ABSOLUTE_ZERO_F)
-			return (tf - 32) * 5 / 9;
+	double convertToCentigrade(double tempFahrenheit) {
+		if (tempFahrenheit >= ABSOLUTE_ZERO_F)
+			return (tempFahrenheit - 32) * 5 / 9;
 
 		// No ELSE needed, since the method can exit due to the previous return.
 		System.out.println("Error");

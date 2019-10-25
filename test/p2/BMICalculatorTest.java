@@ -65,7 +65,7 @@ public class BMICalculatorTest {
 			// Revert System.out to its original value
 			System.setOut(aux);
 
-			assertTrue("In case of error, the word ERROR is NOT printed.", output.trim().equalsIgnoreCase("ERROR"));
+			assertTrue("In case of error, the word ERROR is NOT printed.", output.toLowerCase().contains("ERROR".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(aux);
 			e.printStackTrace();
@@ -85,7 +85,7 @@ public class BMICalculatorTest {
 			instance.calculateBMI(2.41, 100);
 
 			assertEquals(
-					"If you enter 2.41m and 100kg, the method sets the value of BMIvalue but it shouldn't, since the height is out of bounds",
+					"If you enter 2.41m and 100kg, the method sets the value of BMIValue but it shouldn't, since the height is out of bounds",
 					0.0, instance.bmiValue, 0.001);
 
 			System.out.flush();
@@ -96,7 +96,7 @@ public class BMICalculatorTest {
 			// Revert System.out to its original value
 			System.setOut(aux);
 
-			assertTrue("In case of error, the word ERROR is NOT printed.", output.trim().equalsIgnoreCase("ERROR"));
+			assertTrue("In case of error, the word ERROR is NOT printed.", output.toLowerCase().contains("ERROR".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(aux);
 			e.printStackTrace();
@@ -116,7 +116,7 @@ public class BMICalculatorTest {
 			instance.calculateBMI(1.95, 29.5);
 
 			assertEquals(
-                    "If you enter 1.95m and 29.5kg, the method sets the value of BMIvalue but it shouldn't, since the height is out of bounds",
+                    "If you enter 1.95m and 29.5kg, the method sets the value of BMIValue but it shouldn't, since the height is out of bounds",
 					0.0, instance.bmiValue, 0.001);
 
 			System.out.flush();
@@ -127,7 +127,7 @@ public class BMICalculatorTest {
 			// Revert System.out to its original value
 			System.setOut(aux);
 
-			assertTrue("In case of error, the word ERROR is NOT printed.", output.trim().equalsIgnoreCase("ERROR"));
+			assertTrue("In case of error, the word ERROR is NOT printed.", output.toLowerCase().contains("ERROR".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(aux);
 			e.printStackTrace();
@@ -147,7 +147,7 @@ public class BMICalculatorTest {
 			instance.calculateBMI(1.95, 200.5);
 
 			assertEquals(
-					"If you enter 1.95m and 200.5kg, the method sets the value of BMIvalue but it shouldn't, since the height is out of bounds",
+					"If you enter 1.95m and 200.5kg, the method sets the value of BMIValue but it shouldn't, since the height is out of bounds",
 					0.0, instance.bmiValue, 0.001);
 
 			System.out.flush();
@@ -158,7 +158,7 @@ public class BMICalculatorTest {
 			// Revert System.out to its original value
 			System.setOut(pom);
 
-			assertTrue("In case of error, the word ERROR is NOT printed.", output.trim().equalsIgnoreCase("ERROR"));
+			assertTrue("In case of error, the word ERROR is NOT printed.", output.toLowerCase().contains("ERROR".toLowerCase()));
 		} catch (Exception e) {
 			System.setOut(pom);
 			e.printStackTrace();
