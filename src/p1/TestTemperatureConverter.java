@@ -4,17 +4,15 @@ class TestTemperatureConverter {
 
 	public static void main(String[] args) {
 		
-		TemperatureConverter tc = new TemperatureConverter();
+		TemperatureConverter tempConverter = new TemperatureConverter();
 		
-		double tF = tc.convertCtoF(0);
-		
-		System.out.println("Temp (F): " + tF + "F");
+		double tempF = tempConverter.convertToFahrenheit(0);
+		System.out.println("Temp (F): " + tempF + "F");
 
-		double tC = tc.convertFtoC(0);
+		double tempC = tempConverter.convertToCentigrade(0);
+		System.out.println("Temp (C): " + tempC + "C");
 		
-		System.out.println("Temp (C): " + tC + "C");
-		
-		System.out.println("The aggregate state of water at 13C is: " + tc.getAggregateStateOfWater(13));
+		System.out.println("The aggregate state of water at 13C is: " + tempConverter.getAggregateStateOfWater(13));
 	}
 
 }
